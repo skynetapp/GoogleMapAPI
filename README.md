@@ -33,4 +33,6 @@ In action **GetList** from index.php, Function **getJobsDataFromMySQL** will be 
 #### Step 4:
 
 - The Generated xml data and the mysql result set will be passed to function **showJobsAddressListView** in controller to view.
-- In view, we will parse the generated xml and the resultset will be passed to display the tpl page.
+- In view, we will parse the generated xml and the resultset will be passed to display the address in tpl page.
+- When we click on the output address, based on latitude and longitude , we can point to that address in map.
+- Here script will get the latitude and longitude and show the marker on the map.
