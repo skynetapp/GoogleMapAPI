@@ -27,4 +27,10 @@ In action **GetList** from index.php, Function **getJobsDataFromMySQL** will be 
 
 - Function **getAllJobsAddressDataFromMySQL** will be called in controller to action and set the DBMYSQL connection by calling function **setGoogleAPIMySQLConnection**.
 - Function **getJobsAddressDataFromMySQL** will be called from action to Mysql which will execute the query to get the jobs address based on the city and returns the result.
-- The result will be passed to function **generateXMLWithResultSet** in controller to action.
+- The result set will be passed to function **generateXMLWithResultSet** in controller to action. The result set will be executed one by one and will generate the marker location based on the address, latitude and longitude.
+- Function **generateMarkerLocation** will get the parameters and generate the marker location and will return the xml.
+
+#### Step 4:
+
+- The Generated xml data and the mysql result set will be passed to function **showJobsAddressListView** in controller to view.
+- In view, we will parse the generated xml and the resultset will be passed to display the tpl page.
