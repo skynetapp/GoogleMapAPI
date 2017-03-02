@@ -12,3 +12,19 @@ Modules | GoogleAPIController, GoogleAPIDataAction, GoogleAPIMysql, GoogleAPIVie
 Views | getMap.tpl
 js | locationJS.js
 
+
+#### Step 1:
+
+Based on the url, map will be loaded with a textbox to enter city and search the jobs on it.
+
+#### Step 2:
+
+When user enters the city name and submits, it will call the module **googleMapAPI** and corresponding action **GetList** from index.php
+
+#### Step 3:
+
+In action **GetList** from index.php, Function **getJobsDataFromMySQL** will be called from index.php to controller.
+
+- Function **getAllJobsAddressDataFromMySQL** will be called in controller to action and set the DBMYSQL connection by calling function **setGoogleAPIMySQLConnection**.
+- Function **getJobsAddressDataFromMySQL** will be called from action to Mysql which will execute the query to get the jobs address based on the city and returns the result.
+- The result will be passed to function **generateXMLWithResultSet** in controller to action.
