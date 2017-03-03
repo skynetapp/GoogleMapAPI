@@ -39,3 +39,68 @@ In action **GetList** from index.php, Function **getJobsDataFromMySQL** will be 
 
 - When we click on the output address, based on latitude and longitude , we can point to that address in map.
 - Here script will get the latitude and longitude and show the marker on the map.
+
+#### Steps to Execute:
+
+To execute the code in local, below changes need to done in config.php.
+
+- Root Path
+- Base Path
+- Username
+- Password
+- Database name
+
+ **_Code:_**
+	
+```
+$GLOBALS['base_path'] = 'http://localhost/googlemapapi';
+$GLOBALS['root_path'] = 'C:/xampp/htdocs/googlemapapi/';
+
+$GLOBALS['ip']='localhost';
+$GLOBALS['dbuser']='root';
+$GLOBALS['dbpsw']='';
+$GLOBALS['dbname']='googlemap';
+
+```
+
+#### Assumptions:
+
+- locationJS.php - It plays the main role in displaying the job address point on map. It is included in views ->getMap.tpl page. 
+- XMLGenerator.php - Used in action to generate the xml for every record which is retrieved from sql query. The file will be in Global -> XMLGenerator.
+- smarty - This folder is used not always but should be there in Lib -> smarty. It is included in Modules -> GoogleAPIView.php
+
+
+#### Errors:
+
+- If the url calling is not correct, the output will be blank. It should be as below.
+
+**_Url:_**
+	
+```
+http://localhost/lyteanalytics/branches/googlemapapi/index.php?module=googleMapAPI&action=GetList
+```
+
+- If the script file is not included in .tpl page, map will not be loaded.
+- If the sql query is not correct, it cannot get the records properly.
+- Database and table name should be checked properly.
+
+#### Database
+
+In local the names are as follows:
+
+- DB Name: googlemap
+- Table Name: usajobsformattedaddress
+- Minimum Fields for Table: id, reference_address, formatted_address, formatted_lat, formatted_lon, formatted_city
+
+
+
+
+
+
+
+
+
+
+
+
+
