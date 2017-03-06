@@ -78,7 +78,7 @@ $GLOBALS['dbname']='usajobs';
 **_Url:_**
 	
 ```
-http://localhost/lyteanalytics/branches/googlemapapi/index.php?module=googleMapAPI&action=GetList
+http://159.203.239.91/googlemapapi/index.php?module=googleMapAPI&action=GetList
 ```
 
 - If the script file is not included in .tpl page, map will not be loaded.
@@ -87,10 +87,10 @@ http://localhost/lyteanalytics/branches/googlemapapi/index.php?module=googleMapA
 
 #### Database
 
-In local the names are as follows:
+In server, the names are as follows:
 
-- DB Name: googlemap
-- Table Name: usajobsformattedaddress
+- DB Name: bluemix
+- Table Name: usajobs
 - Minimum Fields for Table: id, reference_address, formatted_address, formatted_lat, formatted_lon, formatted_city
 
 
