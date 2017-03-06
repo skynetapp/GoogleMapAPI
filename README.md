@@ -42,7 +42,7 @@ In action **GetList** from index.php, Function **getJobsDataFromMySQL** will be 
 
 #### Steps to Execute:
 
-To execute the code in local, below changes need to done in config.php.
+To execute the code, below changes need to done in config.php.
 
 - Root Path
 - Base Path
@@ -53,13 +53,14 @@ To execute the code in local, below changes need to done in config.php.
  **_Code:_**
 	
 ```
-$GLOBALS['base_path'] = 'http://localhost/googlemapapi';
-$GLOBALS['root_path'] = 'C:/xampp/htdocs/googlemapapi/';
+$GLOBALS['base_path'] = 'http://159.203.239.91/googlemapapi';
+$GLOBALS['root_path'] = '/var/www/html/googlemapapi/';
+
 
 $GLOBALS['ip']='localhost';
-$GLOBALS['dbuser']='root';
-$GLOBALS['dbpsw']='';
-$GLOBALS['dbname']='googlemap';
+$GLOBALS['dbuser']='remoteroot';
+$GLOBALS['dbpsw']='lytepoleAnalytics';
+$GLOBALS['dbname']='usajobs';
 
 ```
 
