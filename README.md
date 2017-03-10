@@ -12,6 +12,15 @@ Modules | GoogleAPIController, GoogleAPIDataAction, GoogleAPIMysql, GoogleAPIVie
 Views | getMap.tpl
 js | locationJS.js
 
+#### Architecture
+
+- By default when we run the url http://159.203.239.91/googlemapapi/index.php?module=googleMapAPI&action=GetList, map will be loaded with a textbox to enter city.
+- When user enters the city and submits it, google map api will get the city name and will search the results in table (usajobs).
+- All the jobs address results will be displayed based on that city.
+- Here xml will generate the result set and pass the data to JS Script.
+- If user clicks on any of the address, the pointer will locate to that point on map.
+
+#### Code flows as follows.
 
 #### Step 1:
 
